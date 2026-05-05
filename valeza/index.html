@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valza | Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0a0a0a;
+  color: white;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+}
+
+header h1 {
+  color: #00f7ff;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+section {
+  padding: 100px 50px;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero h2 {
+  font-size: 50px;
+}
+
+.hero span {
+  background: linear-gradient(90deg,#00f7ff,#ff00c8);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 25px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #00f7ff44;
+}
+
+.tech {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.btn {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 10px;
+  background: linear-gradient(90deg,#00f7ff,#ff00c8);
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Valza</h1>
+  <nav>
+    <a href="#projects">Projects</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>Hi, I'm <span>Valza</span></h2>
+    <p>Frontend Developer building modern web experiences.</p>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+
+    <!-- PROJECTS -->
+
+    <div class="card">
+      <h3>E-Commerce UI</h3>
+      <p>Modern responsive online store interface with cart functionality.</p>
+      <div class="tech">HTML, CSS, JS</div>
+      <a href="https://github.com/v4lza/ecommerce-ui" class="btn">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Personal portfolio with animations and responsive layout.</p>
+      <div class="tech">HTML, CSS, JS</div>
+      <a href="https://github.com/v4lza/portfolio" class="btn">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>Weather App</h3>
+      <p>Weather forecast app using real-time API data.</p>
+      <div class="tech">JS, API</div>
+      <a href="https://github.com/v4lza/weather-app" class="btn">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>Task Manager</h3>
+      <p>To-do app with local storage and dynamic UI updates.</p>
+      <div class="tech">JavaScript</div>
+      <a href="https://github.com/v4lza/task-manager" class="btn">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>Landing Page</h3>
+      <p>High-converting landing page with animations.</p>
+      <div class="tech">HTML, CSS</div>
+      <a href="https://github.com/v4lza/landing-page" class="btn">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>Blog UI</h3>
+      <p>Clean blog design with responsive layout.</p>
+      <div class="tech">HTML, CSS</div>
+      <a href="https://github.com/v4lza/blog-ui" class="btn">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>Chat App UI</h3>
+      <p>Real-time chat interface design.</p>
+      <div class="tech">React</div>
+      <a href="https://github.com/v4lza/chat-app" class="btn">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>Dashboard UI</h3>
+      <p>Admin dashboard with charts and analytics.</p>
+      <div class="tech">React, Chart.js</div>
+      <a href="https://github.com/v4lza/dashboard" class="btn">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>Movie App</h3>
+      <p>Browse movies using API integration.</p>
+      <div class="tech">JS, API</div>
+      <a href="https://github.com/v4lza/movie-app" class="btn">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>Fitness Tracker</h3>
+      <p>Track workouts and progress visually.</p>
+      <div class="tech">React</div>
+      <a href="https://github.com/v4lza/fitness-tracker" class="btn">View Project</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2025 Valza
+</footer>
+
+<script>
+// Scroll animation
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if (top < window.innerHeight - 50) {
+      card.style.opacity = 1;
+      card.style.transform = "translateY(0)";
+    }
+  });
+});
+
+cards.forEach(card => {
+  card.style.opacity = 0;
+  card.style.transform = "translateY(50px)";
+  card.style.transition = "0.5s";
+});
+</script>
+
+</body>
+</html>
